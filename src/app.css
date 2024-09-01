@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme  {
+  --color-*: initial;
+  --color-base: #EBF6F8;
+  --color-base-100: #D1DEE0; 
+  --color-base-200: #B8C8CA;
+  --color-base-content: #0B1516;
+  --color-primary: #4EB7DC;
+  --color-primary-content: #000000;
+  --color-secondary: #F9302A;
+  --color-secondary-content: #000000;
+  --color-third: #FCB61C;
+  --color-third-content: #000000;
+  --color-black: #000000;
+}
+
+:root {
+  @apply bg-base text-base-content font-mono font-normal text-[1rem] min-w-[360px];
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-base: #0B1516;
+    --color-base-100: #263334;
+    --color-base-200: #3D5052;
+    --color-base-content: #BEC6C9;
+  }
+}
+@layer base{
+
+  .container{
+    @apply px-16;
+  }
+  
+  a{
+    @apply text-primary hover:text-base-content;
+  }
+  
+  iconify-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+}
+
+
+@layer components {
+  .card {
+    @apply bg-base-100 p-8 rounded-2xl border-base-200 border shadow-2xl backdrop-blur-3xl;
+  }
+  .mask {
+    @apply w-full fixed h-full top-0 left-0 flex items-center justify-center bg-black/70 dark:bg-black/80 backdrop-blur-sm;
+  }
+}
+
+
