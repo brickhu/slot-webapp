@@ -72,7 +72,7 @@
   <div class=" p-8 flex gap-8 items-center">
     <div class="flex flex-col items-stretch">
       <p>bet: {bet}</p>
-      <p class=" border-t">payout: {payout}</p>
+      <p class=" border-t">pay: {payout}</p>
     </div>
     <div class="flex flex-col items-center ">
       <i>creditds</i>
@@ -93,7 +93,7 @@
     <div>
       {#if credits>=1}
         <div class="flex flex-col">
-          <button class="bg-base-content px-4 py-2 text-base cursor-pointer" disabled={!enable_spin||spinning} on:click={HandleSpin}>
+          <button class="bg-base-content px-4 py-2 text-base cursor-pointer disabled:bg-black/50" disabled={!enable_spin||spinning} on:click={HandleSpin}>
             {spinning?"Spining":`Spin * ${multiple}`}
           </button>
           <i>ctrl+enter</i>
